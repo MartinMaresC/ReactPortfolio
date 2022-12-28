@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillTwitterCircle,AiFillLinkedin,AiFillYoutube} from 'react-icons/ai'
-import Image from 'next/image';
-import Design from '../public/Design.jpg';
+import Image from 'next/legacy/image';
+import Design from '../public/perico.png';
 
 
 export default function Home() {
@@ -39,8 +39,14 @@ export default function Home() {
             <AiFillLinkedin />
             <AiFillYoutube />
         </div>
-        <div className='relative'>
-           <Image src={Design}/>
+        <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden' >
+           <Image src={Design} layout='fill'/>
+        </div>
+       </section>
+
+       <section>
+        <div>
+          <h3>Projects</h3>
         </div>
        </section>
       </main>
