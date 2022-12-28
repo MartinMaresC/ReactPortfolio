@@ -96,7 +96,7 @@ export default function Home() {
               Design
             </h3>
             <p className='py-2 max-w-md mx-auto'>
-              Desing toolS I have used in order to create wireframes and mockups before. 
+              Desing toolS I have used in order to create wireframes and mockups before code. 
             </p>
             <h4 className='py-4 text-teal-600'>Desing tools used</h4>
             <p className='text-gray-800 py-1'>Gimp</p>
@@ -128,7 +128,7 @@ export default function Home() {
           <div className='basis-1/3 flex-1 text-center'>
             <Image src={carnivoraz} rounded-lg object-cover />
             <p>
-              HTML - CSS - VANILLA JAVASCRIPT
+              Figma- HTML - Css - Vanilla Javascript
             </p>
           </div>
         </div>
