@@ -2,7 +2,8 @@ import Head from 'next/head'
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillTwitterCircle,AiFillLinkedin,AiFillYoutube} from 'react-icons/ai'
 import Image from 'next/image';
-import Design from '../public/Design.jpg'
+import Design from '../public/Design.jpg';
+
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
             <AiFillYoutube />
         </div>
         <div className='relative'>
-          <image src={Design} layout='fill'/>
+           <Image src={Design}/>
         </div>
        </section>
       </main>
