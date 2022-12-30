@@ -7,7 +7,7 @@ import design from '../public/design.png';
 import code from '../public/code.png';
 import consulting from '../public/consulting.png';
 import carnivoraz from '../public/ProyectoCarnivorazViews.png';
-import japon from '../public/ProyectoJaponViews.png';
+import japon from '../public/JapanViews.png';
 import refugio from '../public/ProyectoRefugioViews.png';
 import { useState } from 'react';
 
@@ -116,13 +116,13 @@ export default function Home() {
           <div className='basis-1/3 flex-1 text-center'>
             <Image src={japon} rounded-lg object-cover />
             <p>
-              HTML - CSS - VANILLA JAVASCRIPT
+            Figma- HTML - Css - Vanilla Javascript
             </p>
           </div>
           <div className='basis-1/3 flex-1 text-center'>
             <Image src={refugio} rounded-lg object-cover />
             <p>
-              HTML - CSS - VANILLA JAVASCRIPT
+            Figma- HTML - Css - Vanilla Javascript
             </p>
           </div>
           <div className='basis-1/3 flex-1 text-center'>
