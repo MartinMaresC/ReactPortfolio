@@ -10,8 +10,26 @@ import carnivoraz from '../public/ProyectoCarnivorazViews.png';
 import japon from '../public/JapanViews.png';
 import refugio from '../public/ProyectoRefugioViews.png';
 import { useState } from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function Home() {
+  const linkJapan = () =>{
+    window.open('https://martinmaresc.github.io/ProjectJapan/');
+  }
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_bbzacpu', 'template_doyfvbq', form.current, 'Rh_dzfVVKjT3CiUZz')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    };
+
+
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -113,8 +131,8 @@ export default function Home() {
           </p>
         </div>
         <div className='justify-center flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap dark:text-white'>
-          <div className='basis-1/3 flex-1 text-center'>
-            <Image src={japon} rounded-lg object-cover />
+          <div className='basis-1/3 flex-1 text-center cursor-pointer'>
+            <Image onClick={linkJapan} src={japon} rounded-lg object-cover />
             <p>
             Figma- HTML - Css - Vanilla Javascript
             </p>
@@ -132,6 +150,27 @@ export default function Home() {
             </p>
           </div>
         </div>
+       </section>
+       <section>
+       <h3 className='text-3xl py-1 dark:text-white'>Contact</h3>
+
+<div className='flex flex-col justify-center gap-16 lg:flex-row'>
+  
+<div className='justify-center md:h-80 md:w-80'>
+    <form className='flex flex-col' ref={form} onSubmit={sendEmail}>
+      <label className='dark:text-white'>Name: </label>
+      <input className='border-2 rounded' type="text" name="user_name" /><br />
+      <label className='dark:text-white'>Email: </label>
+      <input className='border-2 rounded' type="email" name="user_email" /><br />
+      <label className='dark:text-white'>Message: </label><br />
+      <textarea className='border-2 rounded' name="message" /><br />
+      <input className='bg-teal-600 cursor-pointer rounded' type="submit" value="Send" />
+    </form>
+       </div>
+       <div>
+       <iframe className='md:h-80 md:w-80' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118472.60376270005!2d-102.36133995822752!3d21.885719942388192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ec143ae4d9fb%3A0x4016978679c5220!2sAguascalientes%2C%20Ags.!5e0!3m2!1ses!2smx!4v1672693169382!5m2!1ses!2smx" width="600" height="450" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div>
+</div>
        </section>
       </main>
     </div>
