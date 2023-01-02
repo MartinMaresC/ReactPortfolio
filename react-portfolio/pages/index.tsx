@@ -131,8 +131,8 @@ export default function Home() {
           </p>
         </div>
         <div className='justify-center flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap dark:text-white'>
-          <div className='basis-1/3 flex-1 text-center cursor-pointer'>
-            <Image onClick={linkJapan} src={japon} rounded-lg object-cover />
+          <div onClick={linkJapan} className='basis-1/3 flex-1 text-center cursor-pointer hover:basis-2/3'>
+            <Image src={japon} rounded-lg object-cover />
             <p>
             Figma- HTML - Css - Vanilla Javascript
             </p>
