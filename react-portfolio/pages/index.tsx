@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import {BsFillMoonStarsFill} from 'react-icons/bs';
-import {AiFillTwitterCircle,AiFillLinkedin,AiFillYoutube} from 'react-icons/ai'
+import {AiFillGithub,AiFillLinkedin,AiFillPhone} from 'react-icons/ai'
 import Image from 'next/legacy/image';
 import Design from '../public/perico.png';
 import design from '../public/design.png';
@@ -12,10 +12,20 @@ import refugio from '../public/ProyectoRefugioViews.png';
 import { useState } from 'react';
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import * as bootstrap from 'bootstrap';
 
 export default function Home() {
   const linkJapan = () =>{
     window.open('https://martinmaresc.github.io/ProjectJapan/');
+  }
+  const linkGithub = () =>{
+    window.open('https://github.com/MartinMaresC/');
+  }
+  const linkWhatsapp = () =>{
+    window.open('https://wa.link/t9zoa4');
+  }
+  const linkLinkedin = () =>{
+    window.open('https://www.linkedin.com/in/martin-m-402221220/');
   }
   const form = useRef();
   const sendEmail = (e) => {
@@ -63,9 +73,9 @@ export default function Home() {
           </p>
         </div>
         <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
-            <AiFillTwitterCircle />
-            <AiFillLinkedin />
-            <AiFillYoutube />
+            <AiFillGithub onClick={linkGithub}/>
+            <AiFillLinkedin onClick={linkLinkedin} />
+            <AiFillPhone onClick={linkWhatsapp}/>
         </div>
         <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-80 md:w-80' >
            <Image src={Design} layout='fill'/>
