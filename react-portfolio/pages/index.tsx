@@ -6,6 +6,9 @@ import Design from '../public/perico.png';
 import design from '../public/design.png';
 import code from '../public/code.png';
 import consulting from '../public/consulting.png';
+import idiomas from '../public/idiomas.png';
+import contenido from '../public/contenido.png';
+import taza from '../public/taza-de-cafe.png';
 import carnivoraz from '../public/ProyectoCarnivorazViews.png';
 import japon from '../public/JapanViews.png';
 import refugio from '../public/ProyectoRefugioViews.png';
@@ -58,7 +61,8 @@ export default function Home() {
               <BsFillMoonStarsFill 
               onClick={() =>setDarkMode(!darkMode)} 
               className='cursor-pointer text-2xl
-              dark:text-white' />
+              dark:text-white
+              hover:text-teal-600' />
             </li>
             <li>
               <a className=' bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8' href="">Resume</a>
@@ -73,9 +77,9 @@ export default function Home() {
           </p>
         </div>
         <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
-            <AiFillGithub onClick={linkGithub}/>
-            <AiFillLinkedin onClick={linkLinkedin} />
-            <AiFillPhone onClick={linkWhatsapp}/>
+            <AiFillGithub onClick={linkGithub} className='cursor-pointer hover:text-teal-600'/>
+            <AiFillLinkedin onClick={linkLinkedin} className='cursor-pointer hover:text-teal-600'/>
+            <AiFillPhone onClick={linkWhatsapp} className='cursor-pointer hover:text-teal-600'/>
         </div>
         <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-80 md:w-80' >
            <Image src={Design} layout='fill'/>
@@ -92,7 +96,7 @@ export default function Home() {
 
         <div className='lg:flex gap-10 justify-center'>
           <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
-            <Image src={design} width={100} height={100} />
+            <Image src={idiomas} width={100} height={100} className='hover:hue-rotate-180' />
             <h3 className='text-lg font-medium pt-8 pb-2'>
               Spoken Languages
             </h3>
@@ -105,7 +109,7 @@ export default function Home() {
           </div>
 
           <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
-            <Image src={code} width={100} height={100} />
+            <Image src={taza} width={100} height={100} className='hover:hue-rotate-180 animate-pulse'/>
             <h3 className='text-lg font-medium pt-8 pb-2'>
               Software Development
             </h3>
@@ -119,7 +123,7 @@ export default function Home() {
           </div>
 
           <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
-            <Image src={consulting} width={100} height={100} />
+            <Image src={contenido} width={100} height={100} className='hover:hue-rotate-180'/>
             <h3 className='text-lg font-medium pt-8 pb-2'>
               Design
             </h3>
