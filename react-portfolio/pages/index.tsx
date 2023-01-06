@@ -3,9 +3,6 @@ import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillGithub,AiFillLinkedin,AiFillPhone} from 'react-icons/ai'
 import Image from 'next/legacy/image';
 import Design from '../public/perico.png';
-import design from '../public/design.png';
-import code from '../public/code.png';
-import consulting from '../public/consulting.png';
 import idiomas from '../public/idiomas.png';
 import contenido from '../public/contenido.png';
 import taza from '../public/taza-de-cafe.png';
@@ -28,7 +25,7 @@ export default function Home() {
     window.open('https://wa.link/t9zoa4');
   }
   const linkLinkedin = () =>{
-    window.open('https://www.linkedin.com/in/martin-m-402221220/');
+    window.open('https://www.linkedin.com/in/m-m-402221220/');
   }
   const form = useRef();
   const sendEmail = (e) => {
@@ -37,6 +34,7 @@ export default function Home() {
     emailjs.sendForm('service_bbzacpu', 'template_doyfvbq', form.current, 'Rh_dzfVVKjT3CiUZz')
       .then((result) => {
           console.log(result.text);
+          alert("Mensaje enviado");
       }, (error) => {
           console.log(error.text);
       });
@@ -65,7 +63,7 @@ export default function Home() {
               hover:text-teal-600' />
             </li>
             <li>
-              <a className=' bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8' href="">Resume</a>
+              <a className=' bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8' href="https://www.canva.com/design/DAEgSkgI62w/wpN6i7fOaEeBXJs1kEh1Gg/edit">Resume</a>
               </li>
           </ul>
         </nav>
@@ -148,10 +146,10 @@ export default function Home() {
           <div onClick={linkJapan} className='basis-1/3 flex-1 text-center cursor-pointer hover:basis-1/2 duration-1000'>
             <Image src={japon} rounded-lg object-cover />
             <p>
-            Figma- HTML - Css - Vanilla Javascript
+            Figma- HTML - Css - Javascript Vanilla
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti odio dolore iusto voluptatibus eaque, dolorem alias atque asperiores id nesciunt labore cupiditate beatae saepe, harum voluptas sit molestiae optio reiciendis.
+            Here is one of my personal projects created to write about some of the Japanese's culture. It contains one web page with up to ten different sections to visit. Mobile and desktop view optimized that includes an interactive sliding/drop down menu.
             </p>
           </div>
           <div className='basis-1/3 flex-1 text-center'>
