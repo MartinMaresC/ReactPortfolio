@@ -12,7 +12,7 @@ import refugio from '../public/ProyectoRefugioViews.png';
 import { useState } from 'react';
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import * as bootstrap from 'bootstrap';
+
 
 export default function Home() {
   const linkJapan = () =>{
